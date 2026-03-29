@@ -1,0 +1,220 @@
+---
+title: "Intro to GitHub-based workflows"
+embed-resources: true
+format: revealjs
+highlight-style: tango
+execute:
+  warning: false
+  echo: false
+  cache: false
+engine: knitr # specify engine binding for when no code chunks
+editor_options: 
+  chunk_output_type: console
+---
+
+## Let's simplify things for now
+
+- Most of us mostly use R
+    - Ignore Python, Julia, etc.
+- RStudio has tons of useful features
+    - Ignore Terminal
+    
+. . .
+
+Before getting to GitHub...
+
+## Projects & directories
+
+STOP using `setwd()` and `getwd()`
+
+![](https://montanolab.github.io/toolbox/assets/setwd_rproj_here.png){fig-align="center"}
+
+## Projects & directories
+
+- R Projects!
+    - Start viewing your projects as **modular** units
+    - RStudio optimised for project workflows (e.g., multiple sessions)
+
+## Projects & directories
+
+![](https://raw.githubusercontent.com/martinctc/blog/master/images/RPROJECT_2000dpi.png){fig-align="center"}
+
+# Okay, GitHub...
+
+## 
+
+![](https://openscapes.org/img/blog/github-illustrated-series/github_friends.png){fig-align="center"}
+
+##
+
+1. Helping Future You
+    - No idea what a script does?
+    - Searchable log of project evolution
+    - **Commits** force habit of documentation & **modularity**
+2. Reproducibility as standard (journals, funders)
+3. Structured time machine
+    - Jenga: no need to rebuild whole tower
+4. Collaborating with safety net
+
+##
+
+Local work (saved files) = ideas in mind
+
+Emailed files = coffee ramble
+
+Git = jotted in personal notebook
+
+GitHub = pages to hand out
+
+## Git/GitHub concepts
+
+- Repository
+- Clones vs forks
+- Commit-push-pull
+- Diff
+- Conflict
+- Branch
+- Pull request
+- Issue
+- ...
+
+# Repository
+
+##
+
+- `github-intro`: 
+    - *Public* repository on *GitHub*
+    - https://github.com/montanolab/github-intro
+    - Files/folders, commit history, repo details, settings, etc.
+    - Adding **collaborators** (public vs private repos)
+
+## Clones vs forks
+
+- How close are you to the project?
+- Where do you want your changes to go?
+    - Whose hand-out pages? (GitHub thing)
+- Most cases: cloning
+
+. . .
+
+Collaborators, clone the repo!
+
+## Commit-push-pull
+
+Let me:
+
+- Create a new empty R script in the `scripts/` folder
+- Name it with my name: `script_karthik.R`
+- Save the new script
+- Open the "Git" panel in RStudio
+    - Git sees my changes
+    - Formalise changes with a commit
+    - Share news with a push
+
+. . .
+
+Now one of you!
+
+. . .
+
+Always **pull before** working on new step!
+
+## Commit-push-pull: `.gitignore`
+
+Triple-check before committing data files!
+
+Tell Git to turn a blind eye to certain files from the start
+
+## Diff
+
+Git sees everything, and can time travel within files!
+
+What happens when I sign the README?
+
+## Conflict
+
+What happens when two people change the same thing?
+
+. . .
+
+Flavia, please sign the README and push your commit
+
+. . .
+
+Mismatch between local and remote
+
+Let me push my signature
+
+## Branch
+
+![](https://novatorsoft.com/_next/image?url=https%3A%2F%2Fos.novatorsoft.com%2Fnvs-content%2Fmedium_branch_nedir_1_a4b3ed668c.webp&w=1200&q=75){fig-align="center"}
+
+## 
+
+![](https://kevinsguides.com/wp-content/uploads/2024/06/2-devs-pull-new-changes.webp){fig-align="center"}
+
+- Should be short-ish
+- Main vs other example: overall analysis vs finetuning model
+
+## Pull request
+
+- Let's all branch out and work on `script_NAME.R`
+- Commit with message "practising branching & PRs)
+- Push commit(s)
+- PR: Transfer your completed work to "main" project
+
+## Issue
+
+- Planning project evolution
+- Document changes under bigger picture (why?)
+
+## Git/GitHub concepts
+
+- Repository
+- Clones vs forks
+- Commit-push-pull
+- Diff
+- Conflict
+
+- Branch
+- Pull request
+- Issue
+- ...
+
+## In practice
+
+Peer review complete, need to make changes:
+
+1. Filter data: use only 2008 & 2009
+1. Update model: add interaction term `flipper_length_mm * species`
+1. Update plot: use colour-blind--friendly palette
+
+Let's update (on our own branches) and view changes
+
+. . .
+
+Useful for reviewers too
+
+## 
+
+1. Helping Future You
+    - No idea what a script does?
+    - Searchable log of project evolution
+    - **Commits** force habit of documentation & **modularity**
+2. Reproducibility as standard (journals, funders)
+3. Structured time machine
+    - Jenga: no need to rebuild whole tower
+4. Collaborating with safety net
+
+## 
+
+![](programmer_names.jpg){fig-align="center"}
+
+##
+
+- We can learn from more "mature" fields with time-tested best practices
+- Overwhelm is not the solution
+    - Hours into product, maximise impact
+    - Mindset/value shift
+    - Code review
+    - Let's learn by doing!

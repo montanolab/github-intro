@@ -1,0 +1,5 @@
+.Rproj.user
+.Rhistory
+
+# large raw data file
+data/raw_data.xlsx
