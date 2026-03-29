@@ -24,7 +24,8 @@ penguins_clean <- penguins_raw |>
   select(species, island, flipper_length_mm, body_mass_g, sex, year) |> 
   filter(!is.na(body_mass_g),
          !is.na(flipper_length_mm)) |> 
-  mutate(body_mass_kg = body_mass_g/1000)
+  mutate(body_mass_kg = body_mass_g/1000) |> 
+  filter(year %in% 2008:2009)
 
 write_csv(penguins_clean,
           file = "data/processed_for_analysis.csv")
