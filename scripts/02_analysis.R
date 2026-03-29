@@ -18,7 +18,7 @@ library(broom) # for tidying model outputs
 penguins_clean <- read_csv("data/processed_for_analysis.csv")
 
 # run the linear model
-mass_model <- lm(body_mass_g ~ flipper_length_mm + species, 
+mass_model <- lm(body_mass_g ~ flipper_length_mm + species + flipper_length_mm * species, 
                  data = penguins_clean)
 
 # summarise model results
