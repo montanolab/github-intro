@@ -1,7 +1,9 @@
 ---
 title: "Intro to GitHub-based workflows"
 embed-resources: true
-format: revealjs
+format: 
+  revealjs:
+    scrollable: false
 highlight-style: tango
 execute:
   warning: false
@@ -20,6 +22,8 @@ editor_options:
     - Ignore Terminal
     
 . . .
+
+<br>
 
 Before getting to GitHub...
 
@@ -53,7 +57,7 @@ STOP using `setwd()` and `getwd()`
     - **Commits** force habit of documentation & **modularity**
 2. Reproducibility as standard (journals, funders)
 3. Structured time machine
-    - Jenga: no need to rebuild whole tower
+    - No need to rebuild whole Jenga tower
 4. Collaborating with safety net
 
 ##
@@ -66,64 +70,98 @@ Git = jotted in personal notebook
 
 GitHub = pages to hand out
 
+. . .
+
+![](https://openscapes.org/img/blog/github-illustrated-series/github_wickham_bryan_git_quote.png){fig-align="center" height=400}
+
 ## Git/GitHub concepts
+
+:::: {.columns}
+
+::: {.column width="50%"}
 
 - Repository
 - Clones vs forks
 - Commit-push-pull
 - Diff
 - Conflict
+
+:::
+
+::: {.column width="50%"}
 - Branch
 - Pull request
 - Issue
 - ...
+:::
+
+::::
 
 # Repository
 
 ##
 
-- `github-intro`: 
-    - *Public* repository on *GitHub*
-    - https://github.com/montanolab/github-intro
-    - Files/folders, commit history, repo details, settings, etc.
-    - Adding **collaborators** (public vs private repos)
+`github-intro`:
+
+- [https://github.com/montanolab/github-intro](https://github.com/montanolab/github-intro)
+- *Public* repository on *GitHub*
+- Files/folders, commit history, repo details, settings, etc.
+- Adding **collaborators** (public vs private repos)
 
 ## Clones vs forks
 
 - How close are you to the project?
 - Where do you want your changes to go?
-    - Whose hand-out pages? (GitHub thing)
+    - *Whose hand-out pages? (GitHub thing)*
 - Most cases: cloning
 
 . . .
 
 Collaborators, clone the repo!
 
-## Commit-push-pull
+# Commit-push-pull
+
+## 
 
 Let me:
 
 - Create a new empty R script in the `scripts/` folder
 - Name it with my name: `script_karthik.R`
 - Save the new script
-- Open the "Git" panel in RStudio
+- Open the `Git` panel in RStudio
     - Git sees my changes
     - Formalise changes with a commit
-    - Share news with a push
+    - Share "news" with a push
 
 . . .
 
 Now one of you!
 
-. . .
+## 
 
-Always **pull before** working on new step!
+Always **pull before** working on new step! 
 
-## Commit-push-pull: `.gitignore`
+So it becomes **pull-commit-push**
+
+## `.gitignore`
+
+Tell Git to turn a blind eye to certain files from the start
 
 Triple-check before committing data files!
 
-Tell Git to turn a blind eye to certain files from the start
+. . .
+
+```{r eval=FALSE, echo=TRUE}
+# can ignore files
+data/massive_data_file.xlsx
+
+# but can also ignore folders
+data_sensitive/
+  
+# or even all files of certain file type
+*.pdf
+*.docx
+```
 
 ## Diff
 
@@ -141,11 +179,15 @@ Flavia, please sign the README and push your commit
 
 . . .
 
+<br>
+
 Mismatch between local and remote
 
-Let me push my signature
+Let me try to push my signature
 
-## Branch
+# Branch
+
+##
 
 ![](https://novatorsoft.com/_next/image?url=https%3A%2F%2Fos.novatorsoft.com%2Fnvs-content%2Fmedium_branch_nedir_1_a4b3ed668c.webp&w=1200&q=75){fig-align="center"}
 
@@ -154,12 +196,14 @@ Let me push my signature
 ![](https://kevinsguides.com/wp-content/uploads/2024/06/2-devs-pull-new-changes.webp){fig-align="center"}
 
 - Should be short-ish
-- Main vs other example: overall analysis vs finetuning model
+- Main vs other: overall analysis vs finetuning model
 
 ## Pull request
 
-- Let's all branch out and work on `script_NAME.R`
-- Commit with message "practising branching & PRs)
+- Let's all branch out 
+- Create a branch with your name
+- Create a script `script_NAME.R`
+- Commit with message "branch & PR practice (#1)"
 - Push commit(s)
 - PR: Transfer your completed work to "main" project
 
@@ -167,8 +211,13 @@ Let me push my signature
 
 - Planning project evolution
 - Document changes under bigger picture (why?)
+    - All the changes associated with one goal
 
 ## Git/GitHub concepts
+
+:::: {.columns}
+
+::: {.column width="50%"}
 
 - Repository
 - Clones vs forks
@@ -176,22 +225,32 @@ Let me push my signature
 - Diff
 - Conflict
 
+:::
+
+::: {.column width="50%"}
 - Branch
 - Pull request
 - Issue
 - ...
+:::
+
+::::
 
 ## In practice
 
 Peer review complete, need to make changes:
 
 1. Filter data: use only 2008 & 2009
-1. Update model: add interaction term `flipper_length_mm * species`
+1. Update model: add `flipper_length_mm * species` interaction term
 1. Update plot: use colour-blind--friendly palette
 
 Let's update (on our own branches) and view changes
 
+This time, reference #2
+
 . . .
+
+<br>
 
 Useful for reviewers too
 
@@ -218,3 +277,7 @@ Useful for reviewers too
     - Mindset/value shift
     - Code review
     - Let's learn by doing!
+    
+. . .
+
+These are flexible guidelines, adapt over time
