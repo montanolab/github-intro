@@ -35,9 +35,10 @@ STOP using `setwd()` and `getwd()`
 
 ## Projects & directories
 
-- R Projects!
-    - Start viewing your projects as **modular** units
-    - RStudio optimised for project workflows (e.g., multiple sessions)
+R Projects!
+
+- Start viewing your projects as **modular** units
+- RStudio optimised for project workflows (e.g., multiple sessions)
 
 ## Projects & directories
 
@@ -147,6 +148,8 @@ So it becomes **pull-commit-push**
 
 Tell Git to turn a blind eye to certain files from the start
 
+. . .
+
 Triple-check before committing data files!
 
 . . .
@@ -203,6 +206,7 @@ Let me try to push my signature
 - Let's all branch out 
 - Create a branch with your name
 - Create a script `script_NAME.R`
+    - If already exists, modify slightly
 - Commit with message "branch & PR practice (#1)"
 - Push commit(s)
 - PR: Transfer your completed work to "main" project
@@ -238,15 +242,11 @@ Let me try to push my signature
 
 ## In practice
 
-Peer review complete, need to make changes:
+Peer review complete, [need to make changes](https://github.com/montanolab/github-intro/issues/2)
 
-1. Filter data: use only 2008 & 2009
-1. Update model: add `flipper_length_mm * species` interaction term
-1. Update plot: use colour-blind--friendly palette
+This time, reference #2 in commit messages
 
 Let's update (on our own branches) and view changes
-
-This time, reference #2
 
 . . .
 
@@ -254,11 +254,19 @@ This time, reference #2
 
 Useful for reviewers too
 
+## Branches should be managed well
+
+Should be short-lived/temporary
+
+```{bash eval=FALSE, echo=TRUE}
+git branch -D "karthik"
+```
+
 ## 
 
 1. Helping Future You
     - No idea what a script does?
-    - Searchable log of project evolution
+    - Searchable log of project evolution ([example](https://github.com/stateofindiasbirds/soib_2023))
     - **Commits** force habit of documentation & **modularity**
 2. Reproducibility as standard (journals, funders)
 3. Structured time machine
