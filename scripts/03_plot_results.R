@@ -24,7 +24,7 @@ penguins_plot <- ggplot() +
        subtitle = "Lines generated via predict() from saved .rds model",
        x = "Flipper Length (mm)",
        y = "Body Mass (g)") +
-  # scale_color_brewer(palette = "Set2") +
+  scale_color_brewer(palette = "Set2") +
   theme_minimal()
 
 
