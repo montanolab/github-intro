@@ -7,3 +7,4 @@ This is a short workshop to introduce Git and GitHub, with demos of how to integ
 Please add your signature below this line.
 
 1. Karthik Thrikkadeeri
+1. Rounak Patra
